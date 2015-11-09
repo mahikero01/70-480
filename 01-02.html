@@ -40,9 +40,26 @@
 			
 			var innerDiv = document.getElementById("innerDiv");
 			var p = innerDiv.removeChild(document.getElementById("P1"));
-			*/
+			
 			var innerDiv2 = document.getElementById("innerDiv");
 			innerDiv2.removeNode(true);
+			*/
+			
+			var innerDiv = document.getElementById("innerDiv");
+			var newDiv = document.createElement("div");
+			for (var i = 0; i < innerDiv.childNodes.length; i++) {
+				var anchor = newDiv.appendChild(document.createElement("a"));
+				anchor.setAttribute("href", "http://www.bing.ca");
+				anchor.text = innerDiv.childNodes[i].textContent;
+				newDiv.appendChild(document.createElement("br"));
+			}
+			//innerDiv.replaceNode(newDiv);
+			innerDiv.parentNode.replaceChild(newDiv, innerDiv);
+			
+			
+			
+			           
+			
 		}
 	</script>
 </head>
