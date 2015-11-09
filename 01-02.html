@@ -4,8 +4,12 @@
 	<meta charset="utf-8">
 	<title>01-02 </title>	
 	<script>
-		window.omload = function (){
-		
+		window.onload = function (){
+			var element = document.getElementById("outerDiv");
+			alert(element.innerHTML);
+			
+			var paragraphs = document.getElementsByTagName("p");
+			alert(paragraphs.length);
 		}
 	</script>
 </head>
