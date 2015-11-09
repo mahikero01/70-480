@@ -37,6 +37,9 @@
 			var element = document.getElementById("outerDiv")
 					.appendChild(document.createElement("article"));
 			element.innerText = "My new <article>2  element";
+			
+			var innerDiv = document.getElementById("innerDiv");
+			var p = innerDiv.removeChild(document.getElementById("P1"));
 		}
 	</script>
 </head>
