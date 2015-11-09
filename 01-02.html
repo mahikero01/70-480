@@ -5,6 +5,7 @@
 	<title>01-02 </title>	
 	<script>
 		window.onload = function (){
+			/*
 			var element = document.getElementById("outerDiv");
 			alert(element.innerHTML);
 			
@@ -13,6 +14,29 @@
 			
 			var paragraphs2 = document.getElementsByClassName("subPara");
 			alert("<p> elements with class subPara: " + paragraphs2.length + "</p>");
+			
+			var query1 = document.querySelectorAll("p");
+			alert("<p>elements with 'p': " + query1.length + "</p>");
+			
+			var query2 = document.querySelector("#outerDiv");
+			alert(query2.innerHTML);
+			
+			var element2 = document.getElementById("innerDiv");
+			alert(element2.innerHTML);
+			document.removeChild(element2);
+			
+			var afterRemove = document.getElementById("innerDiv");
+			alert(afterRemove);
+			*/
+			
+			var outerDiv = document.getElementById("outerDiv");
+			var element = document.createElement("article");
+			element.innerText = "My new <article> element";
+			outerDiv.appendChild(element);
+			
+			var element = document.getElementById("outerDiv")
+					.appendChild(document.createElement("article"));
+			element.innerText = "My new <article>2  element";
 		}
 	</script>
 </head>
