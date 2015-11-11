@@ -4,12 +4,20 @@
 	<meta charset="utf-8" />
 	<title></title>
 	<script>
+		
 		window.onload = function (){
-			localStorage.setItem("username", "John");
-			alert("user = " + localStorage.getItem("username"));
+			//localStorage.setItem("username", "John");
+			//alert("user = " + localStorage.getItem("username"));
+		}
+		
+		function LoadFromStorage() {
+			var storageDiv = document.getElementById("storage")
 		}
 	</script>
 </head>
 <body>
+	<div id="storage">
+		<p>Current Storage Contents</p>
+	</div>
 </body>
 </html>
