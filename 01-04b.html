@@ -10,6 +10,11 @@
 	</style>
 	<script>
 		window.onload = function () {
+			var customer = new Object();
+			customer.firstName = "Rick";
+			customer.lastName = "Delorme";
+			customer.shirtSize = "XL";
+			sessionStorage.setItem("cart1", JSON.stringify(customer));
 			LoadFromStorage();
 		
 			document.getElementById("btnAdd").onclick = function () {
