@@ -1,20 +1,26 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta charset="utf-8" />
 	<title>01-04c</title>
 	<script>
 		window.onload = function() {
-			var geoLocator = window.navigator.geolocatio;
-			var posPositions = {enableHighAccuracy: true, timeout: 45000};
+			var geoLocator = window.navigator.geolocation;
+			var posOptions = {enableHighAccuracy: true, timeout: 45000};
 			geoLocator.getCurrentPosition(successPosition, errorPosition, posOptions);
 		}
 		
 		function successPosition(pos) {
-			alert(pos);
+		    var sp = document.createElement("p");
+		    sp.textContent = "Latitude: " + pos.coords.latitude
+                    + " Longitude: " + pos.coords.longitude;
+		    document.getElementById("geoResults").appendChild(sp);
 		}
 		function errorPosition(err) {
-			alert(err);
+		    var sp = document.createElement("p");
+		    sp.textContent = "error " + err.message;
+                    + " code: " + err.code;
+		    document.getElementById("geoResults").appendChild(sp);
 		}
 	</script>
 </head>
