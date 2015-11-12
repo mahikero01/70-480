@@ -59,6 +59,7 @@
   <ItemGroup>
     <Content Include="01-04d.html" />
     <Content Include="01-05a.html" />
+    <Content Include="01-06a.html" />
     <Content Include="samplevideo.ogv" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
