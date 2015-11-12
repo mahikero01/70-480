@@ -5,18 +5,39 @@
 	<meta charset="utf-8" />
     <script>
         window.onload = function () {
+            
             var book = {
                 ISBN: "5555555",
                 Length: 560,
                 genre: "programming",
                 covering: "soft",
                 author: "John Doe",
-                currentPage: 5
+                currentPage: 5,
+                title: "My Big Book of Wonderful Things",
+                flipTo: function flipToAPage(pNum) {
+                    this.currentPage = pNum;
+                },
+                turnPageForward: function turnForward() {
+                    this.flipTo((this.currentPage) + 1);
+                },
+                turnPageBackward: function turnFBackward() {
+                    this.flipTo((this.currentPage) - 1);
+                }
+            }
+
+            document.getElementById("testButton").onclick = function () {
+                //var newBook = new book();
+                book.flipTo(9);
+                alert(book.currentPage);
+                book.turnPageBackward();
+                alert(book.currentPage);
+                book.turnPageForward();
+                alert(book.currentPage);
             }
         }
     </script>
 </head>
 <body>
-
+    <button id="testButton">Press Me</button>
 </body>
 </html>
