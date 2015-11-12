@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="samplevideo.ogv" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -65,6 +66,21 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="01-01.html" />
+    <Content Include="01-02-media.html" />
+    <Content Include="01-02.html" />
+    <Content Include="01-03a.html" />
+    <Content Include="01-03b.html" />
+    <Content Include="01-04a.html" />
+    <Content Include="01-04b.html" />
+    <Content Include="01-04c.html" />
+    <Content Include="backword.png" />
+    <Content Include="forward.png" />
+    <Content Include="Kalimba.mp3" />
+    <Content Include="orange.jpg" />
+    <Content Include="pause.png" />
+    <Content Include="samplevideo.mp4" />
+    <Content Include="template.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
